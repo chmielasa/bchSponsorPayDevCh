@@ -1,0 +1,19 @@
+<h2>Real response: <%= @res_valid %></h2>
+<p><b><%= "Code " + @res_code + ": " %></b><%= @res_body_message %></p>
+<hr/>
+<% if @res_offers %>
+  <% @res_offers.each do |offer| %>
+    <div class="offer">
+      <div class="title"><%= offer['title'] %></div>
+      <div class="payout"><%= offer['payout'] %></div>
+      <div class="thumbnail">
+        <%= image_tag offer["thumbnail"]["lowres"] %>
+      </div>
+    </div>
+    <hr/>
+  <% end %>
+<% else %>
+  <div class="no_offers">
+    <%= "No offers" %>
+  </div>
+<% end %>

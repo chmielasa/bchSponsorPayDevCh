@@ -1,0 +1,11 @@
+<%= form_tag(url_for(:action => :show, :uid => params[:uid], 
+                                       :pub0 => params[:pub0],
+                                       :page => params[:page])) do %>
+  <%= label_tag :uid, "UID: " %>
+  <%= text_field_tag :uid, "player1" %> <br/>
+  <%= label_tag :pub0, "PUB0: " %>
+  <%= text_field_tag :pub0, "campaign2" %> <br/>
+  <%= label_tag :page, "PAGE: " %>
+  <%= text_field_tag :page, "2" %> <br/>
+  <%= submit_tag "Send" %>
+<% end %>
