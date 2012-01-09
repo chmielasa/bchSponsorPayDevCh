@@ -1,3 +1,5 @@
+require 'net/http'
+
 class Request
 
   # Initialize/GET SponsorPay offers.
